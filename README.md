@@ -1,3 +1,5 @@
+![pxi teaser][teaser]
+
 shargs-example-repl is a sample application of [shargs][shargs] 🦈.
 
 See the [`shargs` github repository][shargs] for more details!
@@ -118,3 +120,4 @@ Please report issues [in the `shargs` tracker][issues]!
 [shield-license]: https://img.shields.io/badge/license-MIT-yellow.svg?labelColor=313A42
 [shield-node]: https://img.shields.io/node/v/shargs?color=red&labelColor=313A42
 [shield-prs]: https://img.shields.io/badge/PRs-welcome-green.svg?labelColor=313A42
+[teaser]: https://github.com/Yord/shargs-example-repl/blob/master/teaser.gif?raw=true

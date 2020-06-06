@@ -1,6 +1,6 @@
 {
   "name": "shargs-example-repl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A sample application of shargs",
   "keywords": [
     "shargs",
