@@ -25,7 +25,7 @@ function echoF ({text}) {
   return text
 }
 
-function caseF ({text, mode}) {
+function caseF ({text = '', mode}) {
   switch (mode) {
     case 'upper': return text.toUpperCase()
     case 'lower': return text.toLowerCase()
