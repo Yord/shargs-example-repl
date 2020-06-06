@@ -42,6 +42,11 @@ function completer (parser, commands) {
   const parse = parser(commands)
 
   return line => {
+    if (line === '') {
+      const args = flatMap(commands.opts, cmd => cmd.args)
+      return [args, '']
+    }
+
     const {errs, args} = parse(line)
 
     const {_, ...subcommands} = args
