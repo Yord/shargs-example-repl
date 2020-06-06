@@ -1,7 +1,7 @@
 const nodeRepl = require('repl')
 
 const repl = (parser, commands) => {
-  console.log(commands.desc ? commands.desc + '\n\n' : '\n')
+  console.log(commands.desc ? commands.desc + '\n' : '')
 
   nodeRepl.start({
     prompt: `${commands.key}~$ `,
