@@ -47,7 +47,7 @@ function completer (parser, commands) {
       return [args, '']
     }
 
-    const {errs, args} = parse(line)
+    const {args} = parse(line)
 
     const {_, ...subcommands} = args
 
