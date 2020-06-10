@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const {commands} = require('./src/commands')
 const {parser}   = require('./src/parser')
-const {repl}     = require('./src/repl')
+const {repl}     = require('shargs-repl')
 
 repl(parser, commands)
