@@ -22,7 +22,8 @@
     "url": "https://github.com/Yord/shargs-example-repl.git"
   },
   "scripts": {
-    "start": "node ./repl"
+    "start": "node ./repl",
+    "test": "jest --ci --coverage --collectCoverageFrom 'src/**/*.js' --logHeapUsage --passWithNoTests"
   },
   "engines": {
     "node": ">=8.3.0"
