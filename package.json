@@ -35,10 +35,10 @@
     "jest": "25.1.0"
   },
   "dependencies": {
-    "shargs": "0.24.3",
+    "shargs": "0.24.6",
     "shargs-opts": "0.5.0",
     "shargs-parser": "0.6.0",
-    "shargs-repl": "0.1.0",
+    "shargs-repl": "0.2.0",
     "shargs-usage": "0.6.0"
   }
 }
