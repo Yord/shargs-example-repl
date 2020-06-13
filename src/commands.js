@@ -1,7 +1,7 @@
 const {subcommand, command, string, stringPos, variadic} = require('shargs-opts')
 
 const echoCmd = subcommand([
-  stringPos('text', {desc: 'This text is echoed.'})
+  stringPos('text', {desc: 'This text is echoed.', descArg: 'TEXT'})
 ])
 
 const caseCmd = subcommand([
