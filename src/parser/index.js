@@ -1,6 +1,11 @@
-const {parserSync} = require('shargs')
+const {lexerSync, parserSync} = require('shargs')
 const {restrictToOnly} = require('shargs-parser')
 const {strToArgv} = require('./strToArgv')
+
+const lexer = lexerSync({
+  toArgv,
+  opts: [restrictToOnly]
+})
 
 const parser = parserSync({
   toArgv,
@@ -9,6 +14,7 @@ const parser = parserSync({
 })
 
 module.exports = {
+  lexer,
   parser
 }
 
