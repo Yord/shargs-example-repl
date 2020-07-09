@@ -22,15 +22,19 @@ module.exports = {
 }
 
 function echoF ({text}) {
-  return text
+  console.log(text)
 }
 
 function caseF ({text = '', mode}) {
+  let out = ''
+
   switch (mode) {
-    case 'upper': return text.toUpperCase()
-    case 'lower': return text.toLowerCase()
-    default:      return text
+    case 'upper': out = text.toUpperCase(); break
+    case 'lower': out = text.toLowerCase(); break
+    default:      out = text;               break
   }
+
+  console.log(out)
 }
 
 const {desc, optsDef, optsLists, space, synopsis, usage} = require('shargs-usage')
@@ -43,12 +47,16 @@ function helpF (command) {
     cols: [{width: 25, padEnd: 2}, {width: 53}]
   }
 
+  let help = ''
+
   if (Array.isArray(command) && command.length === 0) {
-    return optsLists(commands)(style)
+    help = optsLists(commands)(style)
+  } else {
+    const command2 = Array.isArray(command) ? command : [command]
+    const subcommands = commands.opts.filter(({key}) => command2.includes(key))
+    const helps = subcommands.map(cmd => subDocs(cmd)(style))
+    help = helps.join('\n')
   }
 
-  const command2 = Array.isArray(command) ? command : [command]
-  const subcommands = commands.opts.filter(({key}) => command2.includes(key))
-  const helps = subcommands.map(cmd => subDocs(cmd)(style))
-  return helps.join('\n')
+  console.log(help)
 }
