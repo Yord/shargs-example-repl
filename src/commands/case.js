@@ -11,13 +11,18 @@ module.exports = {
   case: _case
 }
 
-function action ({text = '', mode}) {
+function action ({text = '', mode}, errs) {
   let out = ''
 
   switch (mode) {
     case 'upper': out = text.toUpperCase(); break
     case 'lower': out = text.toLowerCase(); break
     default:      out = text;               break
+  }
+
+  if (errs.length > 0) {
+    const err = errs.map(({code, msg}) => `${code}: ${msg}`).join('\n')
+    console.log(`${err}\n`)
   }
 
   console.log(out)
