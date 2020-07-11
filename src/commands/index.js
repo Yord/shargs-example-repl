@@ -3,7 +3,7 @@ const {case: _case}       = require('./case')
 const {echo}              = require('./echo')
 const {cmdDocs, replDocs} = require('../usage')
 
-const help = variadic('help', ['help'], {action, desc: 'Print usage documentation.'})
+const help = variadic('help', ['help'], {action, desc: 'Type "help CMD" to display usage documentation for a command.'})
 
 const opts = [
   echo,
