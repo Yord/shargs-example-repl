@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const {commands}      = require('./src/commands')
+const {defaultAction} = require('./src/defaultAction')
 const {lexer, parser} = require('./src/parser')
 const {repl}          = require('shargs-repl')
 
-repl(lexer, parser, commands, {only: true})
+repl(lexer, parser, commands, {only: true, defaultAction: defaultAction(commands)})
