@@ -4,4 +4,4 @@ const {defaultAction} = require('./src/defaultAction')
 const {lexer, parser} = require('./src/parser')
 const {repl}          = require('shargs-repl')
 
-repl(lexer, parser, commands, {only: true, defaultAction})
+repl(lexer, parser, commands, {only: true, defaultAction: defaultAction(commands)})
