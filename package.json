@@ -38,7 +38,7 @@
     "shargs": "0.24.7",
     "shargs-opts": "0.5.0",
     "shargs-parser": "0.6.1",
-    "shargs-repl": "0.6.2",
+    "shargs-repl": "0.6.3",
     "shargs-usage": "0.6.0"
   }
 }
