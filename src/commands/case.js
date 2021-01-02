@@ -1,4 +1,4 @@
-const {subcommand, string, stringPos} = require('shargs-opts')
+const {subcommand, string, stringPos} = require('shargs/opts')
 
 const cmd = subcommand([
   stringPos('text', {desc: 'This text is transformed into upper or lower case.'}),

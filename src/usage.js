@@ -1,4 +1,4 @@
-const {desc, optsDef, optsLists, space, synopsis, usage} = require('shargs-usage')
+const {desc, optsDef, optsLists, space, synopsis, usage} = require('shargs/usage')
 
 const style = {
   line: [{width: 80}],

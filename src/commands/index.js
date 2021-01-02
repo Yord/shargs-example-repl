@@ -1,4 +1,4 @@
-const {command, variadic} = require('shargs-opts')
+const {command, variadic} = require('shargs/opts')
 const {case: _case}       = require('./case')
 const {echo}              = require('./echo')
 const {cmdDocs, replDocs} = require('../usage')
