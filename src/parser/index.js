@@ -1,10 +1,12 @@
-const {lexerSync, parserSync} = require('shargs')
-const {restrictToOnly} = require('shargs-parser')
+const {parserSync} = require('shargs')
+const {restrictToOnly} = require('shargs/parser')
 const {strToArgv} = require('./strToArgv')
 
-const lexer = lexerSync({
+const lexer = parserSync({
   toArgv,
-  opts: [restrictToOnly]
+  opts: [restrictToOnly],
+  toArgs: ({errs, opts}) => ({errs, args: opts}),
+  fromArgs: ({errs, args}) => ({errs, opts: args})
 })
 
 const parser = parserSync({

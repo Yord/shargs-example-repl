@@ -99,6 +99,8 @@ E.g. if you use an unknown `--mode` in `case`, like in `case 'Foo Bar' --mode ca
 
 ```bash
 ValueRestrictionsViolated: A value lies outside the allowed values of an option.
+
+Foo Bar
 ```
 
 ## Reporting Issues

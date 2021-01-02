@@ -1,4 +1,4 @@
-const {subcommand, stringPos} = require('shargs-opts')
+const {subcommand, stringPos} = require('shargs/opts')
 
 const cmd = subcommand([
   stringPos('text', {desc: 'This text is echoed.', descArg: 'TEXT'})
